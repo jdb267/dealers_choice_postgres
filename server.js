@@ -6,7 +6,7 @@ const { client, syncAndSeed } = require('./db');
 
 app.get('/', async (req, res, next) => {
   try {
-    const response = await client.query('SELECT * FROM name;');
+    const response = await client.query('SELECT * FROM album;');
     const albums = response.rows;
     res.send(`<html>
     <head></head>
